@@ -15,10 +15,11 @@ exports.init = async function () {
     logger.info("Test User created")
 
     for (let i = 0; i < 20; i++) {
+
         const store = {
             "name": "Test" + i,
-            "cuit": "1995743 -" + Math.random() * 10,
-            "concepts": [1, 2, 3, 4, 5, 6],
+            "cuit": "1995743 -" + Math.round(Math.random() * 10),
+            "concepts": [Math.round(Math.random() * 10), Math.round(Math.random() * 10), Math.round(Math.random() * 10), Math.round(Math.random() * 10), Math.round(Math.random() * 10), Math.round(Math.random() * 10)],
             "currentBalance": Math.random() * 10000,
             "active": Boolean(Math.round(Math.random())),
             "lastSale": "2022-06-14T06:17:09Z"

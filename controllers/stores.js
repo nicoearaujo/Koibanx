@@ -12,4 +12,14 @@ const getStores = async (req, res) => {
     }
 }
 
-module.exports = { getStores }
+const createStore = async (req, res) => {
+    try {
+        console.log(req.body)
+        const store = await Store.create(req.body);
+        res.status(201).send(store);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+}
+
+module.exports = { getStores, createStore };
