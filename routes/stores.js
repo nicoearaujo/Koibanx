@@ -1,4 +1,3 @@
-const logger = require('../utils/logger');
 const express = require('express');
 const router = express.Router();
 const { getStores, createStore } = require('../controllers/stores');
@@ -7,9 +6,9 @@ const { body, validationResult } = require('express-validator');
 const Store = require('../models/store');
 
 
-router.use(express.json());
 
 router.get('/stores', auth, getStores);
+router.use(express.json());
 
 
 router.post('/stores',

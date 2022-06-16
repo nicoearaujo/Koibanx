@@ -2,6 +2,7 @@ const User = require('../models/user')
 const logger = require('../utils/logger')
 const Store = require('../models/store')
 
+
 exports.init = async function () {
     if (await User.countDocuments({ "username": "test@koibanx.com" })) {
         return
@@ -11,8 +12,8 @@ exports.init = async function () {
     user.username = "test@koibanx.com";
     user.password = "test123";
     await User.create(user);
-
     logger.info("Test User created")
+
 
     for (let i = 0; i < 20; i++) {
 
@@ -27,4 +28,7 @@ exports.init = async function () {
         Store.create(store);
     }
     logger.info("Test Stores created")
+
+
+
 }
