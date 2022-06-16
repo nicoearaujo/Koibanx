@@ -7,7 +7,7 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "run": "node $NODE_DEBUG_OPTION app.js",
-    "test": "jest --watch --silent"
+    "test": "jest --silent"
   },
   "author": "",
   "license": "ISC",
