@@ -3,7 +3,7 @@
 Proyecto desarrollado para la prueba de backend de Koibanx
 
 
-## Installing and running
+## Instalación y ejecución
 
 * Se necesita crear el archivo .env con la configuración brindada al final de este documento.
 * Para correr el programa se debe ejecutar los siguientes comandos: 
